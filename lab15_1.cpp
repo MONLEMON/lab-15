@@ -2,9 +2,22 @@
 using namespace std;
 
 template <typename T>
-void insertionSort(T d[],int N){
-
-}
+void insertionSort(T d[],int N){  
+    int r;
+	double key; 
+    for (int i = 1; i < N; i++)
+    { 
+        key = d[i]; 
+        r = i - 1;
+		for (r=i-1 ;r >= 0 and d[r] < key;r--){
+			 d[r+1] = d[r];
+		} 
+        d[r + 1] = key;
+	 cout<<"Pass "<<i<<":" ;
+	 for(int i = 0; i < N; i++) cout << d[i] << " ";
+	 cout << "\n" ;
+    } 
+} 
 
 int main(){
 	int a[10] = {12,25,30,44,2,0,4,7,55,25};
